@@ -49,7 +49,7 @@ struct DefaultTrailingMetric: AnimatedStackMetric {
   }
 }
 
-public class StackView: UIView {
+public class AnimatedStackView: UIView {
 
   private var items = [UIView]()
   private var viewToBeRemoved: UIView?

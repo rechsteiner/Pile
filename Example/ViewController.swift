@@ -46,15 +46,15 @@ struct CustomAnimationMetric: AnimationMetric {
 class ViewController: UIViewController {
 
   let titles = ["Contacts", "Videoes", "Pictures", "Activity"]
-  let firstStackView: StackView
-  let secondStackView: StackView
+  let firstStackView: AnimatedStackView
+  let secondStackView: AnimatedStackView
   var currentSliderValue: Float = 0
   @IBOutlet var containerView: UIView!
 
   required init(coder: NSCoder) {
 
-    self.firstStackView = StackView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
-    self.secondStackView = StackView(frame: CGRect(x: 0, y: 70, width: 100, height: 30),
+    self.firstStackView = AnimatedStackView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+    self.secondStackView = AnimatedStackView(frame: CGRect(x: 0, y: 70, width: 100, height: 30),
       activeMetric: CustomActiveMetric(),
       leadingMetric: CustomLeadingMetric(),
       trailingMetric: CustomTrailingMetric(),
