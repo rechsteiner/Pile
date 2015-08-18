@@ -149,6 +149,21 @@ public class AnimatedStackView: UIView {
     }
   }
 
+  public func update(view: UIView) {
+    if self.items.count > 0 {
+      let lastItem = self.items.removeLast()
+      lastItem.removeFromSuperview()
+      self.items.append(view)
+      self.addSubview(view)
+      self.updateView(view,
+        fromMetric: self.leadingMetric,
+        toMetric: self.activeMetric,
+        animated: false,
+        completion: nil
+      )
+    }
+  }
+
   // MARK: Private
 
   private func updateView(view: UIView,
