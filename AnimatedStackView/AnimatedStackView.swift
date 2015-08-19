@@ -137,8 +137,8 @@ public class AnimatedStackView: UIView {
   }
 
   public func setViews(views: [UIView]) {
-    let lastView = self.items.removeLast()
-    lastView.removeFromSuperview()
+    let lastView = self.items.last
+    lastView?.removeFromSuperview()
     self.items = views
     if let lastItem = self.items.last {
       self.addSubview(lastItem)
