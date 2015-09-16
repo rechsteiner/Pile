@@ -71,7 +71,7 @@ public class AnimatedStackView: UIView {
       super.init(frame: frame)
   }
 
-  required public init(coder: NSCoder) {
+  required public init?(coder: NSCoder) {
     self.activeMetric = DefaultActiveMetric()
     self.leadingMetric = DefaultLeadingMetric()
     self.trailingMetric = DefaultTrailingMetric()
@@ -117,7 +117,7 @@ public class AnimatedStackView: UIView {
         toMetric: self.leadingMetric,
         animated: animated) { completed in
           if completed {
-            if let viewToBeRemoved = self.viewToBeRemoved {
+            if let _ = self.viewToBeRemoved {
               lastView.removeFromSuperview()
               self.viewToBeRemoved = nil
             }

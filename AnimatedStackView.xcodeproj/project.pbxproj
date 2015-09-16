@@ -246,6 +246,8 @@
 		95884E3D1B71533E0060C127 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Martin Rechsteiner";
 				TargetAttributes = {
@@ -563,6 +565,7 @@
 				95884E5E1B71533E0060C127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95884E5F1B71533E0060C127 /* Build configuration list for PBXNativeTarget "AnimatedStackViewTests" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +574,7 @@
 				95884E611B71533E0060C127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95884E841B71536E0060C127 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
@@ -579,6 +583,7 @@
 				95884E861B71536E0060C127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
