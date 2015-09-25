@@ -12,8 +12,8 @@ struct CustomActiveMetric: AnimatedStackMetric {
   let alpha: CGFloat = 1
   let transform = rotationTransform(0)
 
-  func frame(bounds: CGRect) -> CGRect {
-    return bounds
+  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
+    return stackViewBounds
   }
 }
 
@@ -21,8 +21,8 @@ struct CustomLeadingMetric: AnimatedStackMetric {
   let alpha: CGFloat = 0
   let transform = rotationTransform(M_PI_2)
 
-  func frame(bounds: CGRect) -> CGRect {
-    return CGRectOffset(bounds, bounds.height, 0)
+  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
+    return CGRectOffset(stackViewBounds, stackViewBounds.height, 0)
   }
 }
 
@@ -30,8 +30,8 @@ struct CustomTrailingMetric: AnimatedStackMetric {
   let alpha: CGFloat = 0
   let transform = rotationTransform(-M_PI_2)
 
-  func frame(bounds: CGRect) -> CGRect {
-    return CGRectOffset(bounds, -bounds.height, 0)
+  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
+    return CGRectOffset(stackViewBounds, -stackViewBounds.height, 0)
   }
 }
 
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
   var currentSliderValue: Float = 0
   @IBOutlet var containerView: UIView!
 
-  required init(coder: NSCoder) {
+  required init?(coder: NSCoder) {
 
     self.firstStackView = AnimatedStackView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
     self.secondStackView = AnimatedStackView(frame: CGRect(x: 0, y: 70, width: 100, height: 30),
@@ -102,7 +102,7 @@ class ViewController: UIViewController {
   }
 
   private func createTitleLabel(title: String) -> UILabel {
-    let titleLabel = UILabel(frame: .zeroRect)
+    let titleLabel = UILabel(frame: .zero)
     titleLabel.textAlignment = .Center
     titleLabel.font = UIFont.boldSystemFontOfSize(15)
     titleLabel.textColor = UIColor.whiteColor()
