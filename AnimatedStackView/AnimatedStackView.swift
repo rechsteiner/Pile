@@ -11,7 +11,7 @@ public protocol AnimationMetric {
 public protocol AnimatedStackMetric {
   var alpha: CGFloat { get }
   var transform: CATransform3D { get }
-  func frame(bounds: CGRect) -> CGRect
+  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect
 }
 
 struct DefaultAnimationMetric: AnimationMetric {
@@ -26,8 +26,8 @@ struct DefaultActiveMetric: AnimatedStackMetric {
   let alpha: CGFloat = 1
   let transform = CATransform3DIdentity
 
-  func frame(bounds: CGRect) -> CGRect {
-    return bounds
+  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
+    return stackViewBounds
   }
 }
 
@@ -35,8 +35,8 @@ struct DefaultLeadingMetric: AnimatedStackMetric {
   let alpha: CGFloat = 0
   let transform = CATransform3DIdentity
 
-  func frame(bounds: CGRect) -> CGRect {
-    return CGRectOffset(bounds, 0, -bounds.height)
+  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
+    return CGRectOffset(stackViewBounds, 0, -stackViewBounds.height)
   }
 }
 
@@ -44,8 +44,8 @@ struct DefaultTrailingMetric: AnimatedStackMetric {
   let alpha: CGFloat = 0
   let transform = CATransform3DIdentity
 
-  func frame(bounds: CGRect) -> CGRect {
-    return CGRectOffset(bounds, 0, bounds.height)
+  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
+    return CGRectOffset(stackViewBounds, 0, stackViewBounds.height)
   }
 }
 
@@ -196,7 +196,7 @@ public class AnimatedStackView: UIView {
   }
 
   private func applyMetricForView(view: UIView, metric: AnimatedStackMetric) {
-    view.frame = metric.frame(self.bounds)
+    view.frame = metric.frame(view, stackViewBounds: self.bounds)
     view.alpha = metric.alpha
     view.layer.transform = metric.transform
   }
