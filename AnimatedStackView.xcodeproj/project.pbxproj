@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		3E5BFE051BB98528004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; settings = {ASSET_TAGS = (); }; };
 		3E5BFE071BB98544004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5BFE101BB98A3E004BE9C7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE081BB98827004BE9C7 /* Nimble.framework */; };
+		3E5BFE111BB98A3E004BE9C7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE091BB98827004BE9C7 /* Quick.framework */; };
 		3E5BFE121BB98AB2004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; settings = {ASSET_TAGS = (); }; };
 		3E5BFE131BB98AB5004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5BFE161BB98ECF004BE9C7 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE081BB98827004BE9C7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E5BFE171BB98ECF004BE9C7 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE091BB98827004BE9C7 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		95884E4C1B71533E0060C127 /* AnimatedStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 95884E4B1B71533E0060C127 /* AnimatedStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95884E521B71533E0060C127 /* AnimatedStackView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95884E461B71533E0060C127 /* AnimatedStackView.framework */; };
-		95884E591B71533E0060C127 /* AnimatedStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E581B71533E0060C127 /* AnimatedStackViewTests.swift */; };
+		95884E591B71533E0060C127 /* AnimatedStackViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E581B71533E0060C127 /* AnimatedStackViewSpec.swift */; };
 		95884E631B7153590060C127 /* AnimatedStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E621B7153590060C127 /* AnimatedStackView.swift */; };
 		95884E6D1B71536E0060C127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E6C1B71536E0060C127 /* AppDelegate.swift */; };
 		95884E6F1B71536E0060C127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E6E1B71536E0060C127 /* ViewController.swift */; };
@@ -42,6 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3E5BFE151BB98EC0004BE9C7 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3E5BFE161BB98ECF004BE9C7 /* Nimble.framework in Copy Frameworks */,
+				3E5BFE171BB98ECF004BE9C7 /* Quick.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95884E8E1B7153AA0060C127 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,12 +74,14 @@
 /* Begin PBXFileReference section */
 		3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMetric.swift; sourceTree = "<group>"; };
 		3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedStackMetric.swift; sourceTree = "<group>"; };
+		3E5BFE081BB98827004BE9C7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		3E5BFE091BB98827004BE9C7 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		95884E461B71533E0060C127 /* AnimatedStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimatedStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95884E4A1B71533E0060C127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95884E4B1B71533E0060C127 /* AnimatedStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedStackView.h; sourceTree = "<group>"; };
 		95884E511B71533E0060C127 /* AnimatedStackViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimatedStackViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95884E571B71533E0060C127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95884E581B71533E0060C127 /* AnimatedStackViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedStackViewTests.swift; sourceTree = "<group>"; };
+		95884E581B71533E0060C127 /* AnimatedStackViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedStackViewSpec.swift; sourceTree = "<group>"; };
 		95884E621B7153590060C127 /* AnimatedStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedStackView.swift; sourceTree = "<group>"; };
 		95884E681B71536E0060C127 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95884E6B1B71536E0060C127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5BFE101BB98A3E004BE9C7 /* Nimble.framework in Frameworks */,
+				3E5BFE111BB98A3E004BE9C7 /* Quick.framework in Frameworks */,
 				95884E521B71533E0060C127 /* AnimatedStackView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,12 +121,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E5BFE0E1BB9888A004BE9C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E5BFE081BB98827004BE9C7 /* Nimble.framework */,
+				3E5BFE091BB98827004BE9C7 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		95884E3C1B71533E0060C127 = {
 			isa = PBXGroup;
 			children = (
 				95884E481B71533E0060C127 /* AnimatedStackView */,
 				95884E551B71533E0060C127 /* AnimatedStackViewTests */,
 				95884E691B71536E0060C127 /* Example */,
+				3E5BFE0E1BB9888A004BE9C7 /* Frameworks */,
 				95884E471B71533E0060C127 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,7 +174,7 @@
 		95884E551B71533E0060C127 /* AnimatedStackViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				95884E581B71533E0060C127 /* AnimatedStackViewTests.swift */,
+				95884E581B71533E0060C127 /* AnimatedStackViewSpec.swift */,
 				95884E561B71533E0060C127 /* Supporting Files */,
 			);
 			path = AnimatedStackViewTests;
@@ -201,6 +231,7 @@
 				95884E421B71533E0060C127 /* Frameworks */,
 				95884E431B71533E0060C127 /* Headers */,
 				95884E441B71533E0060C127 /* Resources */,
+				3E5BFE0C1BB98830004BE9C7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -218,6 +249,7 @@
 				95884E4D1B71533E0060C127 /* Sources */,
 				95884E4E1B71533E0060C127 /* Frameworks */,
 				95884E4F1B71533E0060C127 /* Resources */,
+				3E5BFE151BB98EC0004BE9C7 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,6 +349,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E5BFE0C1BB98830004BE9C7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		95884E411B71533E0060C127 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -332,8 +382,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95884E591B71533E0060C127 /* AnimatedStackViewTests.swift in Sources */,
 				3E5BFE131BB98AB5004BE9C7 /* AnimatedStackMetric.swift in Sources */,
+				95884E591B71533E0060C127 /* AnimatedStackViewSpec.swift in Sources */,
 				3E5BFE121BB98AB2004BE9C7 /* AnimationMetric.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +529,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AnimatedStackView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -496,6 +551,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AnimatedStackView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -510,6 +570,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -527,6 +588,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AnimatedStackViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
