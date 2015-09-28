@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5BFE051BB98528004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5BFE071BB98544004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5BFE121BB98AB2004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5BFE131BB98AB5004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; settings = {ASSET_TAGS = (); }; };
 		95884E4C1B71533E0060C127 /* AnimatedStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 95884E4B1B71533E0060C127 /* AnimatedStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95884E521B71533E0060C127 /* AnimatedStackView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95884E461B71533E0060C127 /* AnimatedStackView.framework */; };
 		95884E591B71533E0060C127 /* AnimatedStackViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E581B71533E0060C127 /* AnimatedStackViewTests.swift */; };
@@ -52,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMetric.swift; sourceTree = "<group>"; };
+		3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedStackMetric.swift; sourceTree = "<group>"; };
 		95884E461B71533E0060C127 /* AnimatedStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimatedStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95884E4A1B71533E0060C127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95884E4B1B71533E0060C127 /* AnimatedStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedStackView.h; sourceTree = "<group>"; };
@@ -118,19 +124,21 @@
 		95884E481B71533E0060C127 /* AnimatedStackView */ = {
 			isa = PBXGroup;
 			children = (
-				95884E4B1B71533E0060C127 /* AnimatedStackView.h */,
+				3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */,
 				95884E621B7153590060C127 /* AnimatedStackView.swift */,
-				95884E491B71533E0060C127 /* Supporting Files */,
+				3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */,
+				95884E491B71533E0060C127 /* Resources */,
 			);
 			path = AnimatedStackView;
 			sourceTree = "<group>";
 		};
-		95884E491B71533E0060C127 /* Supporting Files */ = {
+		95884E491B71533E0060C127 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				95884E4B1B71533E0060C127 /* AnimatedStackView.h */,
 				95884E4A1B71533E0060C127 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		95884E551B71533E0060C127 /* AnimatedStackViewTests */ = {
@@ -314,6 +322,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5BFE051BB98528004BE9C7 /* AnimationMetric.swift in Sources */,
+				3E5BFE071BB98544004BE9C7 /* AnimatedStackMetric.swift in Sources */,
 				95884E631B7153590060C127 /* AnimatedStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +333,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				95884E591B71533E0060C127 /* AnimatedStackViewTests.swift in Sources */,
+				3E5BFE131BB98AB5004BE9C7 /* AnimatedStackMetric.swift in Sources */,
+				3E5BFE121BB98AB2004BE9C7 /* AnimationMetric.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
