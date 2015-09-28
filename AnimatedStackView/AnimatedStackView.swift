@@ -52,7 +52,7 @@ struct DefaultTrailingMetric: AnimatedStackMetric {
 public class AnimatedStackView: UIView {
 
   private var items = [UIView]()
-  private var viewToBeRemoved: UIView?
+  private var activeView: UIView?
   private let activeMetric: AnimatedStackMetric
   private let leadingMetric: AnimatedStackMetric
   private let trailingMetric: AnimatedStackMetric
@@ -82,28 +82,24 @@ public class AnimatedStackView: UIView {
   public func push(view: UIView, animated: Bool = true) {
 
     if let lastView = self.items.last {
-      self.viewToBeRemoved = lastView
       self.updateView(lastView,
         fromMetric: self.activeMetric,
         toMetric: self.trailingMetric,
         animated: animated) { completed in
           if completed {
-            if let viewToBeRemoved = self.viewToBeRemoved {
-              viewToBeRemoved.removeFromSuperview()
-              self.viewToBeRemoved = nil
-            }
+            self.removeSubviews()
           }
       }
     }
-
-    self.addSubview(view)
+    
     self.items.append(view)
+    self.addSubview(view)
+    self.activeView = view
     self.updateView(view,
       fromMetric: self.leadingMetric,
       toMetric: self.activeMetric,
       animated: animated,
-      completion: nil
-    )
+      completion: nil)
   }
 
   public func pop(animated: Bool = true) {
@@ -111,22 +107,19 @@ public class AnimatedStackView: UIView {
     if self.items.count > 1 {
 
       let lastView = self.items.removeLast()
-      self.viewToBeRemoved = lastView
       self.updateView(lastView,
         fromMetric: self.activeMetric,
         toMetric: self.leadingMetric,
         animated: animated) { completed in
           if completed {
-            if let _ = self.viewToBeRemoved {
-              lastView.removeFromSuperview()
-              self.viewToBeRemoved = nil
-            }
+            self.removeSubviews()
           }
       }
 
-      if let newLastView = self.items.last {
-        self.addSubview(newLastView)
-        self.updateView(newLastView,
+      if let lastView = self.items.last {
+        self.addSubview(lastView)
+        self.activeView = lastView
+        self.updateView(lastView,
           fromMetric: self.trailingMetric,
           toMetric: self.activeMetric,
           animated: animated,
@@ -137,17 +130,16 @@ public class AnimatedStackView: UIView {
   }
 
   public func setViews(views: [UIView]) {
-    let lastView = self.items.last
-    lastView?.removeFromSuperview()
     self.items = views
-    if let lastItem = self.items.last {
-      self.addSubview(lastItem)
-      self.updateView(lastItem,
+    if let lastView = self.items.last {
+      self.addSubview(lastView)
+      self.activeView = lastView
+      self.updateView(lastView,
         fromMetric: self.leadingMetric,
         toMetric: self.activeMetric,
         animated: false,
-        completion: nil
-      )
+        completion: nil)
+      self.removeSubviews()
     }
   }
 
@@ -157,16 +149,24 @@ public class AnimatedStackView: UIView {
       lastItem.removeFromSuperview()
       self.items.append(view)
       self.addSubview(view)
+      self.activeView = view
       self.updateView(view,
         fromMetric: self.leadingMetric,
         toMetric: self.activeMetric,
         animated: false,
-        completion: nil
-      )
+        completion: nil)
     }
   }
 
   // MARK: Private
+  
+  private func removeSubviews() {
+    self.subviews.forEach { view in
+      if view != self.activeView {
+        view.removeFromSuperview()
+      }
+    }
+  }
 
   private func updateView(view: UIView,
     fromMetric: AnimatedStackMetric,
