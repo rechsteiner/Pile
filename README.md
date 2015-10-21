@@ -110,3 +110,13 @@ let stackView = AnimatedStackView(frame: .zero,
 ```
 
 Download the project and run the Example target to see it in action.
+
+## Install 
+
+### [Carthage](https://github.com/carthage/carthage)
+
+Add the following line into your Carfile and run `carthage update`:
+
+```
+github "rechsteiner/AnimatedStackView"
+```
