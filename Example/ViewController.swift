@@ -22,7 +22,7 @@ struct CustomLeadingMetric: AnimatedStackMetric {
   let transform = rotationTransform(M_PI_2)
 
   func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
-    return CGRectOffset(stackViewBounds, stackViewBounds.height, 0)
+    return stackViewBounds.offsetBy(dx: stackViewBounds.midX, dy: 0)
   }
 }
 
@@ -31,21 +31,21 @@ struct CustomTrailingMetric: AnimatedStackMetric {
   let transform = rotationTransform(-M_PI_2)
 
   func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
-    return CGRectOffset(stackViewBounds, -stackViewBounds.height, 0)
+    return stackViewBounds.offsetBy(dx: -stackViewBounds.midX, dy: 0)
   }
 }
 
 struct CustomAnimationMetric: AnimationMetric {
-  let duration: CFTimeInterval = 1.5
+  let duration: CFTimeInterval = 1
   let delay: CFTimeInterval = 0
-  let damping: CGFloat = 0.5
+  let damping: CGFloat = 0.8
   let initialVelocity: CGFloat = 0
   let options = UIViewAnimationOptions.BeginFromCurrentState
 }
 
 class ViewController: UIViewController {
 
-  let titles = ["Contacts", "Videoes", "Pictures", "Activity"]
+  let titles = ["Tokyo", "New York", "Sao Paulo", "Seoul"]
   let firstStackView: AnimatedStackView
   let secondStackView: AnimatedStackView
   var currentSliderValue: Float = 0
@@ -70,10 +70,10 @@ class ViewController: UIViewController {
     self.containerView.addSubview(self.firstStackView)
     self.containerView.addSubview(self.secondStackView)
 
-    let firstTitleLabel = self.createTitleLabel("Hi")
-    let secondTitleLabel = self.createTitleLabel("Hi")
+    let firstTitleLabel = self.createTitleLabel(titles.first!)
+    let secondTitleLabel = self.createTitleLabel(titles.first!)
 
-    self.firstStackView.push(firstTitleLabel, animated: false)
+    self.firstStackView.push(firstTitleLabel)
     self.secondStackView.push(secondTitleLabel, animated: false)
 
   }

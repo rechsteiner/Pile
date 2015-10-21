@@ -1,5 +1,6 @@
 import UIKit
 
+/// Defines the configuration details for the animation block
 public protocol AnimationMetric {
   var duration: CFTimeInterval { get }
   var delay: CFTimeInterval { get }
