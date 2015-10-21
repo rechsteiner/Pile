@@ -120,3 +120,11 @@ Add the following line into your Carfile and run `carthage update`:
 ```
 github "rechsteiner/AnimatedStackView"
 ```
+
+### [CocoaPods](https://cocoapods.org)
+
+Add the following line to your Podfile and run `pod install`:
+
+```
+pod 'AnimatedStackView', '~> 0.0.1'
+```
