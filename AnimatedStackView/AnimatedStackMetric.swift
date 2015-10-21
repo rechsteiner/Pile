@@ -1,5 +1,7 @@
 import UIKit
 
+/// Defines how the views should be displayed and how
+/// they should be animated into view.
 public protocol AnimatedStackMetric {
   var alpha: CGFloat { get }
   var transform: CATransform3D { get }

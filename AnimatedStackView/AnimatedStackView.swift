@@ -1,5 +1,10 @@
 import UIKit
 
+/// AnimatedStackView allows you to transition between views
+/// using your own custom animations. You can push views onto
+/// the stack and the framework will animate between the
+/// animation metrics defined. When the animation completes
+/// it will remove any hidden views.
 public class AnimatedStackView: UIView {
 
   var stack = [UIView]()
@@ -10,6 +15,13 @@ public class AnimatedStackView: UIView {
   let trailingMetric: AnimatedStackMetric
   let animationMetric: AnimationMetric
 
+  /// Initialize a new AnimatedStackView.
+  ///
+  /// :param: frame The frame for the AnimatedStackView
+  /// :param: activeMetric The metric that the active view will animate into.
+  /// :param: leadingMetric The metric that new views being pushed will animate from.
+  /// :param: trailingMetric The metric that popped views will animate to.
+  /// :param: animationMetric The metric for configuring animation details
   public init(frame: CGRect,
     activeMetric: AnimatedStackMetric = DefaultActiveMetric(),
     leadingMetric: AnimatedStackMetric = DefaultLeadingMetric(),
@@ -26,7 +38,10 @@ public class AnimatedStackView: UIView {
   required public init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-
+  
+  /// Pushes a new view onto the stack. This will add the view
+  /// as a subview and remove the previous view when the
+  /// animation completes.
   public func push(view: UIView, animated animate: Bool = true) {
 
     if let lastView = self.stack.last {
@@ -49,6 +64,9 @@ public class AnimatedStackView: UIView {
     )
   }
 
+  /// Pop the currently active view off the stack and remove
+  /// it from view. Add the next available view in the stack
+  /// as a subview and animate it into view.
   public func pop(animated animate: Bool = true) {
 
     if self.stack.count > 1 {
@@ -74,6 +92,7 @@ public class AnimatedStackView: UIView {
     }
   }
 
+  /// Replace the entire stack with a new array of views
   public func setViews(views: [UIView]) {
     let lastView = self.stack.last
     lastView?.removeFromSuperview()
@@ -89,6 +108,8 @@ public class AnimatedStackView: UIView {
     }
   }
 
+  /// Replace the currently active view. This will remove the
+  /// old view and add the new as a subview without any animation.
   public func update(view: UIView) {
     if self.stack.count > 0 {
       let lastItem = self.stack.removeLast()
@@ -103,6 +124,8 @@ public class AnimatedStackView: UIView {
       )
     }
   }
+  
+  // MARK: Internal
   
   func handleAnimationCallback() {
     if self.removalStack.isEmpty == false {
