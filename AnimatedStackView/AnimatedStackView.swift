@@ -125,6 +125,17 @@ public class AnimatedStackView: UIView {
     }
   }
   
+  override public func layoutSubviews() {
+    super.layoutSubviews()
+    if let lastView = self.stack.last {
+      self.updateView(lastView,
+        fromMetric: self.activeMetric,
+        toMetric: self.activeMetric,
+        animated: false,
+        completion: nil)
+    }
+  }
+  
   // MARK: Internal
   
   func handleAnimationCallback() {
