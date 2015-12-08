@@ -2,35 +2,14 @@ import UIKit
 
 /// Defines how the views should be displayed and how
 /// they should be animated into view.
-public protocol AnimatedStackMetric {
-  var alpha: CGFloat { get }
-  var transform: CATransform3D { get }
-  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect
-}
-
-struct DefaultActiveMetric: AnimatedStackMetric {
-  let alpha: CGFloat = 1
-  let transform = CATransform3DIdentity
+public struct AnimatedStackMetric {
+  public let alpha: CGFloat
+  public let transform: CATransform3D
+  public let frame: CGRect
   
-  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
-    return stackViewBounds
-  }
-}
-
-struct DefaultLeadingMetric: AnimatedStackMetric {
-  let alpha: CGFloat = 0
-  let transform = CATransform3DIdentity
-  
-  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
-    return stackViewBounds.offsetBy(dx: 0, dy: -stackViewBounds.height)
-  }
-}
-
-struct DefaultTrailingMetric: AnimatedStackMetric {
-  let alpha: CGFloat = 0
-  let transform = CATransform3DIdentity
-  
-  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
-    return stackViewBounds.offsetBy(dx: 0, dy: stackViewBounds.height)
+  public init(alpha: CGFloat, transform: CATransform3D, frame: CGRect) {
+    self.alpha = alpha
+    self.transform = transform
+    self.frame = frame
   }
 }
