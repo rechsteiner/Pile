@@ -8,33 +8,6 @@ func rotationTransform(angle: Double) -> CATransform3D {
   return CATransform3DConcat(perspective, rotation)
 }
 
-struct CustomActiveMetric: AnimatedStackMetric {
-  let alpha: CGFloat = 1
-  let transform = rotationTransform(0)
-
-  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
-    return stackViewBounds
-  }
-}
-
-struct CustomLeadingMetric: AnimatedStackMetric {
-  let alpha: CGFloat = 0
-  let transform = rotationTransform(M_PI_2)
-
-  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
-    return stackViewBounds.offsetBy(dx: stackViewBounds.midX, dy: 0)
-  }
-}
-
-struct CustomTrailingMetric: AnimatedStackMetric {
-  let alpha: CGFloat = 0
-  let transform = rotationTransform(-M_PI_2)
-
-  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
-    return stackViewBounds.offsetBy(dx: -stackViewBounds.midX, dy: 0)
-  }
-}
-
 struct CustomAnimationMetric: AnimationMetric {
   let duration: CFTimeInterval = 1
   let delay: CFTimeInterval = 0
@@ -54,14 +27,13 @@ class ViewController: UIViewController {
   required init?(coder: NSCoder) {
 
     self.firstStackView = AnimatedStackView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
-    self.secondStackView = AnimatedStackView(frame: CGRect(x: 0, y: 70, width: 100, height: 30),
-      activeMetric: CustomActiveMetric(),
-      leadingMetric: CustomLeadingMetric(),
-      trailingMetric: CustomTrailingMetric(),
+    self.secondStackView = AnimatedStackView(
+      frame: CGRect(x: 0, y: 70, width: 100, height: 30),
       animationMetric: CustomAnimationMetric())
-
+    
     super.init(coder: coder)
 
+    self.secondStackView.delegate = self
   }
 
   override func viewDidLoad() {
@@ -112,6 +84,34 @@ class ViewController: UIViewController {
 
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return .LightContent
+  }
+  
+}
+
+extension ViewController: AnimatedStackViewDelegate {
+  
+  func animatedStackView(animatedStackView: AnimatedStackView,
+    activeMetricForView: UIView) -> AnimatedStackMetric {
+    return AnimatedStackMetric(
+      alpha: 1,
+      transform: rotationTransform(0),
+      frame: animatedStackView.bounds)
+  }
+  
+  func animatedStackView(animatedStackView: AnimatedStackView,
+    leadingMetricForView: UIView) -> AnimatedStackMetric {
+    return AnimatedStackMetric(
+      alpha: 0,
+      transform: rotationTransform(M_PI_2),
+      frame: animatedStackView.bounds.offsetBy(dx: animatedStackView.bounds.midX, dy: 0))
+  }
+  
+  func animatedStackView(animatedStackView: AnimatedStackView,
+    trailingMetricForView: UIView) -> AnimatedStackMetric {
+    return AnimatedStackMetric(
+      alpha: 0,
+      transform: rotationTransform(-M_PI_2),
+      frame: animatedStackView.bounds.offsetBy(dx: -animatedStackView.bounds.midX, dy: 0))
   }
   
 }
