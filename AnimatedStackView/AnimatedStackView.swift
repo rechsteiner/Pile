@@ -32,6 +32,10 @@ public class AnimatedStackView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
+  public func currentView() -> UIView? {
+    return self.stack.last
+  }
+  
   /// Pushes a new view onto the stack. This will add the view
   /// as a subview and remove the previous view when the
   /// animation completes.
