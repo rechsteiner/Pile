@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E5BFE051BB98528004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; settings = {ASSET_TAGS = (); }; };
-		3E5BFE071BB98544004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5BFE051BB98528004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; };
+		3E5BFE071BB98544004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; };
 		3E5BFE101BB98A3E004BE9C7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE081BB98827004BE9C7 /* Nimble.framework */; };
 		3E5BFE111BB98A3E004BE9C7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE091BB98827004BE9C7 /* Quick.framework */; };
-		3E5BFE121BB98AB2004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; settings = {ASSET_TAGS = (); }; };
-		3E5BFE131BB98AB5004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5BFE121BB98AB2004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; };
+		3E5BFE131BB98AB5004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; };
 		3E5BFE161BB98ECF004BE9C7 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE081BB98827004BE9C7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E5BFE171BB98ECF004BE9C7 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE091BB98827004BE9C7 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		95884E4C1B71533E0060C127 /* AnimatedStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 95884E4B1B71533E0060C127 /* AnimatedStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -293,12 +293,15 @@
 				TargetAttributes = {
 					95884E451B71533E0060C127 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 					95884E501B71533E0060C127 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 					95884E671B71536E0060C127 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -540,6 +543,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -561,6 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -579,6 +584,7 @@
 				INFOPLIST_FILE = AnimatedStackViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -593,6 +599,7 @@
 				INFOPLIST_FILE = AnimatedStackViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -607,6 +614,7 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -617,6 +625,7 @@
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
