@@ -14,5 +14,5 @@ struct DefaultAnimationMetric: AnimationMetric {
   let delay: CFTimeInterval = 0
   let damping: CGFloat = 0.6
   let initialVelocity: CGFloat = 0
-  let options = UIViewAnimationOptions.BeginFromCurrentState
+  let options = UIViewAnimationOptions.beginFromCurrentState
 }

@@ -5,8 +5,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-  func application(application: UIApplication,
-    didFinishLaunchingWithOptions: [NSObject: AnyObject]?) -> Bool {
+  func application(_ application: UIApplication,
+    didFinishLaunchingWithOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
       return true
   }
   
