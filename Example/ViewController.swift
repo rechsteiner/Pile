@@ -1,7 +1,7 @@
 import UIKit
 import AnimatedStackView
 
-func rotationTransform(angle: Double) -> CATransform3D {
+func rotationTransform(_ angle: Double) -> CATransform3D {
   var perspective = CATransform3DIdentity
   perspective.m34 = 1.0 / -1000
   let rotation = CATransform3DMakeRotation(CGFloat(angle), 0, 1, 0)
@@ -12,7 +12,7 @@ struct CustomActiveMetric: AnimatedStackMetric {
   let alpha: CGFloat = 1
   let transform = rotationTransform(0)
 
-  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
+  func frame(_ view: UIView, stackViewBounds: CGRect) -> CGRect {
     return stackViewBounds
   }
 }
@@ -21,7 +21,7 @@ struct CustomLeadingMetric: AnimatedStackMetric {
   let alpha: CGFloat = 0
   let transform = rotationTransform(M_PI_2)
 
-  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
+  func frame(_ view: UIView, stackViewBounds: CGRect) -> CGRect {
     return stackViewBounds.offsetBy(dx: stackViewBounds.midX, dy: 0)
   }
 }
@@ -30,7 +30,7 @@ struct CustomTrailingMetric: AnimatedStackMetric {
   let alpha: CGFloat = 0
   let transform = rotationTransform(-M_PI_2)
 
-  func frame(view: UIView, stackViewBounds: CGRect) -> CGRect {
+  func frame(_ view: UIView, stackViewBounds: CGRect) -> CGRect {
     return stackViewBounds.offsetBy(dx: -stackViewBounds.midX, dy: 0)
   }
 }
@@ -40,7 +40,7 @@ struct CustomAnimationMetric: AnimationMetric {
   let delay: CFTimeInterval = 0
   let damping: CGFloat = 0.8
   let initialVelocity: CGFloat = 0
-  let options = UIViewAnimationOptions.BeginFromCurrentState
+  let options = UIViewAnimationOptions.beginFromCurrentState
 }
 
 class ViewController: UIViewController {
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
 
   }
 
-  @IBAction func push(sender: AnyObject) {
+  @IBAction func push(_ sender: AnyObject) {
     let randomIndex = Int(arc4random_uniform(UInt32(self.titles.count)))
     let firstTitleLabel = self.createTitleLabel(self.titles[randomIndex])
     let secondTitleLabel = self.createTitleLabel(self.titles[randomIndex])
@@ -86,12 +86,12 @@ class ViewController: UIViewController {
     self.secondStackView.push(secondTitleLabel)
   }
 
-  @IBAction func pop(sender: AnyObject) {
+  @IBAction func pop(_ sender: AnyObject) {
     self.firstStackView.pop()
     self.secondStackView.pop()
   }
 
-  @IBAction func handleSliderUpdate(slider: UISlider) {
+  @IBAction func handleSliderUpdate(_ slider: UISlider) {
     if slider.value > 0.5 && currentSliderValue <= 0.5 {
       self.push(self)
       self.currentSliderValue = slider.value
@@ -101,17 +101,17 @@ class ViewController: UIViewController {
     }
   }
 
-  private func createTitleLabel(title: String) -> UILabel {
+  fileprivate func createTitleLabel(_ title: String) -> UILabel {
     let titleLabel = UILabel(frame: .zero)
-    titleLabel.textAlignment = .Center
-    titleLabel.font = UIFont.boldSystemFontOfSize(15)
-    titleLabel.textColor = UIColor.whiteColor()
+    titleLabel.textAlignment = .center
+    titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
+    titleLabel.textColor = UIColor.white
     titleLabel.text = title
     return titleLabel
   }
 
-  override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return .LightContent
+  override var preferredStatusBarStyle : UIStatusBarStyle {
+    return .lightContent
   }
   
 }

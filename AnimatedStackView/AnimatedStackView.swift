@@ -5,7 +5,7 @@ import UIKit
 /// the stack and the framework will animate between the
 /// animation metrics defined. When the animation completes
 /// it will remove any hidden views.
-public class AnimatedStackView: UIView {
+open class AnimatedStackView: UIView {
 
   var stack = [UIView]()
   var removalStack = [UIView]()
@@ -42,7 +42,7 @@ public class AnimatedStackView: UIView {
   /// Pushes a new view onto the stack. This will add the view
   /// as a subview and remove the previous view when the
   /// animation completes.
-  public func push(view: UIView, animated animate: Bool = true) {
+  open func push(_ view: UIView, animated animate: Bool = true) {
 
     if let lastView = self.stack.last {
       self.removalStack.append(lastView)
@@ -67,7 +67,7 @@ public class AnimatedStackView: UIView {
   /// Pop the currently active view off the stack and remove
   /// it from view. Add the next available view in the stack
   /// as a subview and animate it into view.
-  public func pop(animated animate: Bool = true) {
+  open func pop(animated animate: Bool = true) {
 
     if self.stack.count > 1 {
 
@@ -93,7 +93,7 @@ public class AnimatedStackView: UIView {
   }
 
   /// Replace the entire stack with a new array of views
-  public func setViews(views: [UIView]) {
+  open func setViews(_ views: [UIView]) {
     let lastView = self.stack.last
     lastView?.removeFromSuperview()
     self.stack = views
@@ -110,7 +110,7 @@ public class AnimatedStackView: UIView {
 
   /// Replace the currently active view. This will remove the
   /// old view and add the new as a subview without any animation.
-  public func update(view: UIView) {
+  open func update(_ view: UIView) {
     if self.stack.count > 0 {
       let lastItem = self.stack.removeLast()
       lastItem.removeFromSuperview()
@@ -125,7 +125,7 @@ public class AnimatedStackView: UIView {
     }
   }
   
-  override public func layoutSubviews() {
+  override open func layoutSubviews() {
     super.layoutSubviews()
     if let lastView = self.stack.last {
       self.updateView(lastView,
@@ -147,16 +147,16 @@ public class AnimatedStackView: UIView {
     }
   }
 
-  func updateView(view: UIView,
+  func updateView(_ view: UIView,
     fromMetric: AnimatedStackMetric,
     toMetric: AnimatedStackMetric,
     animated: Bool,
-    completion: (Bool -> Void)?
+    completion: ((Bool) -> Void)?
   ) {
     if animated {
       self.applyMetricForView(view, metric: fromMetric)
 
-      UIView.animateWithDuration(self.animationMetric.duration,
+      UIView.animate(withDuration: self.animationMetric.duration,
         delay: self.animationMetric.delay,
         usingSpringWithDamping: self.animationMetric.damping,
         initialSpringVelocity: self.animationMetric.initialVelocity,
@@ -173,7 +173,7 @@ public class AnimatedStackView: UIView {
     }
   }
 
-  func applyMetricForView(view: UIView, metric: AnimatedStackMetric) {
+  func applyMetricForView(_ view: UIView, metric: AnimatedStackMetric) {
     view.frame = metric.frame(view, stackViewBounds: self.bounds)
     view.alpha = metric.alpha
     view.layer.transform = metric.transform

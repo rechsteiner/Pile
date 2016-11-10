@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E5BFE051BB98528004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; settings = {ASSET_TAGS = (); }; };
-		3E5BFE071BB98544004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5BFE051BB98528004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; };
+		3E5BFE071BB98544004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; };
 		3E5BFE101BB98A3E004BE9C7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE081BB98827004BE9C7 /* Nimble.framework */; };
 		3E5BFE111BB98A3E004BE9C7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE091BB98827004BE9C7 /* Quick.framework */; };
-		3E5BFE121BB98AB2004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; settings = {ASSET_TAGS = (); }; };
-		3E5BFE131BB98AB5004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; settings = {ASSET_TAGS = (); }; };
+		3E5BFE121BB98AB2004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; };
+		3E5BFE131BB98AB5004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; };
 		3E5BFE161BB98ECF004BE9C7 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE081BB98827004BE9C7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E5BFE171BB98ECF004BE9C7 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE091BB98827004BE9C7 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		95884E4C1B71533E0060C127 /* AnimatedStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 95884E4B1B71533E0060C127 /* AnimatedStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -288,17 +288,20 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Martin Rechsteiner";
 				TargetAttributes = {
 					95884E451B71533E0060C127 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0810;
 					};
 					95884E501B71533E0060C127 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0810;
 					};
 					95884E671B71536E0060C127 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -445,8 +448,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -454,6 +459,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -493,8 +499,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -514,6 +522,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -525,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -537,9 +547,11 @@
 				INFOPLIST_FILE = AnimatedStackView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.martinrechsteiner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -547,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -559,8 +572,10 @@
 				INFOPLIST_FILE = AnimatedStackView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.martinrechsteiner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -568,7 +583,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
@@ -578,7 +592,9 @@
 				);
 				INFOPLIST_FILE = AnimatedStackViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.martinrechsteiner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -586,13 +602,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AnimatedStackViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.martinrechsteiner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -606,7 +623,9 @@
 				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.martinrechsteiner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -616,7 +635,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.martinrechsteiner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
