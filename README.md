@@ -1,5 +1,10 @@
 # AnimatedStackView
 
+<a href="https://circleci.com/gh/rechsteiner/AnimatedStackView"><img src="https://circleci.com/gh/rechsteiner/AnimatedStackView/tree/master.svg?style=shield&circle-token=56b16884f50f6a72873c786dc936c5c59c4ea160" /></a>
+<a href="https://cocoapods.org/pods/AnimatedStackView"><img src="https://img.shields.io/cocoapods/v/AnimatedStackView.svg" /></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg" /></a>
+
+
 AnimatedStackView allows you to transition between `UIView`s using your own custom animations. You can push and pop any views onto the stack and the framework will animate between the them by using the properties you've defined. You can animate between the `frame`, `transform` and `alpha`.
 
 ## Usage
@@ -9,7 +14,7 @@ To get started, just initialize the stack view like you would with any `UIView`:
 let stackView = AnimatedStackView(frame: .zero)
 ```
 
-Then push any `UIView` onto the stack and it will animate it into view: 
+Then push any `UIView` onto the stack and it will animate it into view:
 
 ```Swift
 stackView.push(view)
@@ -49,7 +54,7 @@ public protocol AnimationMetric {
 ```
 
 
-## Example 
+## Example
 
 Here's an example that flips in views horizontally to either side:
 
@@ -111,7 +116,7 @@ let stackView = AnimatedStackView(frame: .zero,
 
 Download the project and run the Example target to see it in action.
 
-## Install 
+## Install
 
 ### [Carthage](https://github.com/carthage/carthage)
 
