@@ -1,7 +1,7 @@
 import UIKit
 
 /// Defines the configuration details for the animation block
-public protocol AnimationMetric {
+public protocol PileAnimationMetric {
   var duration: CFTimeInterval { get }
   var delay: CFTimeInterval { get }
   var damping: CGFloat { get }
@@ -9,7 +9,7 @@ public protocol AnimationMetric {
   var options: UIViewAnimationOptions { get }
 }
 
-public struct DefaultAnimationMetric: AnimationMetric {
+public struct DefaultAnimationMetric: PileAnimationMetric {
   public let duration: CFTimeInterval
   public let delay: CFTimeInterval
   public let damping: CGFloat

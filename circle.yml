@@ -9,4 +9,4 @@ dependencies:
 
 test:
   override:
-    - bundle exec scan -s iOS -p AnimatedStackView.xcodeproj
+    - bundle exec scan -s iOS -p Pile.xcodeproj

@@ -1,32 +1,31 @@
 import UIKit
 
-/// AnimatedStackView allows you to transition between views
-/// using your own custom animations. You can push views onto
-/// the stack and the framework will animate between the
-/// animation metrics defined. When the animation completes
-/// it will remove any hidden views.
-open class AnimatedStackView: UIView {
+/// PileView allows you to transition between views using your own
+/// custom animations. You can push views onto the stack and the
+/// framework will animate between the animation metrics defined. When
+/// the animation completes it will remove any hidden views.
+open class PileView: UIView {
 
   var stack = [UIView]()
   var removalStack = [UIView]()
   
-  let activeMetric: AnimatedStackMetric
-  let leadingMetric: AnimatedStackMetric
-  let trailingMetric: AnimatedStackMetric
-  let animationMetric: AnimationMetric
+  let activeMetric: PileMetric
+  let leadingMetric: PileMetric
+  let trailingMetric: PileMetric
+  let animationMetric: PileAnimationMetric
 
-  /// Initialize a new AnimatedStackView.
+  /// Initialize a new PileView
   ///
-  /// :param: frame The frame for the AnimatedStackView
+  /// :param: frame The frame for the PileView
   /// :param: activeMetric The metric that the active view will animate into.
   /// :param: leadingMetric The metric that new views being pushed will animate from.
   /// :param: trailingMetric The metric that popped views will animate to.
   /// :param: animationMetric The metric for configuring animation details
   public init(frame: CGRect,
-    activeMetric: AnimatedStackMetric = DefaultActiveMetric(),
-    leadingMetric: AnimatedStackMetric = DefaultLeadingMetric(),
-    trailingMetric: AnimatedStackMetric = DefaultTrailingMetric(),
-    animationMetric: AnimationMetric = DefaultAnimationMetric()
+    activeMetric: PileMetric = DefaultActiveMetric(),
+    leadingMetric: PileMetric = DefaultLeadingMetric(),
+    trailingMetric: PileMetric = DefaultTrailingMetric(),
+    animationMetric: PileAnimationMetric = DefaultAnimationMetric()
   ) {
     self.activeMetric = activeMetric
     self.leadingMetric = leadingMetric
@@ -148,8 +147,8 @@ open class AnimatedStackView: UIView {
   }
 
   func updateView(_ view: UIView,
-    fromMetric: AnimatedStackMetric,
-    toMetric: AnimatedStackMetric,
+    fromMetric: PileMetric,
+    toMetric: PileMetric,
     animated: Bool,
     completion: ((Bool) -> Void)?
   ) {
@@ -173,7 +172,7 @@ open class AnimatedStackView: UIView {
     }
   }
 
-  func applyMetricForView(_ view: UIView, metric: AnimatedStackMetric) {
+  func applyMetricForView(_ view: UIView, metric: PileMetric) {
     view.frame = metric.frame(view, stackViewBounds: self.bounds)
     view.alpha = metric.alpha
     view.layer.transform = metric.transform
