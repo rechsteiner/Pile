@@ -19,7 +19,7 @@ struct CustomActiveMetric: AnimatedStackMetric {
 
 struct CustomLeadingMetric: AnimatedStackMetric {
   let alpha: CGFloat = 0
-  let transform = rotationTransform(M_PI_2)
+  let transform = rotationTransform(.pi / 2)
 
   func frame(_ view: UIView, stackViewBounds: CGRect) -> CGRect {
     return stackViewBounds.offsetBy(dx: stackViewBounds.midX, dy: 0)
@@ -28,7 +28,7 @@ struct CustomLeadingMetric: AnimatedStackMetric {
 
 struct CustomTrailingMetric: AnimatedStackMetric {
   let alpha: CGFloat = 0
-  let transform = rotationTransform(-M_PI_2)
+  let transform = rotationTransform(-.pi / 2)
 
   func frame(_ view: UIView, stackViewBounds: CGRect) -> CGRect {
     return stackViewBounds.offsetBy(dx: -stackViewBounds.midX, dy: 0)
