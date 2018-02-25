@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://s3.eu-central-1.amazonaws.com/rechsteiner-pile/1100e6e8-4912-40bf-8ebb-81341819fcfc.png" width="280" height="130" />
+  <img src="https://s3.eu-central-1.amazonaws.com/rechsteiner-pile/da132057-5d56-4ed2-8654-7838d09910b0.png" width="280" height="115" />
 </p>
 
 <p align="center">
