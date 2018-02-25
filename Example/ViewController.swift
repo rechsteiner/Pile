@@ -1,5 +1,5 @@
 import UIKit
-import AnimatedStackView
+import Pile
 
 func rotationTransform(_ angle: Double) -> CATransform3D {
   var perspective = CATransform3DIdentity
@@ -8,7 +8,7 @@ func rotationTransform(_ angle: Double) -> CATransform3D {
   return CATransform3DConcat(perspective, rotation)
 }
 
-struct CustomActiveMetric: AnimatedStackMetric {
+struct CustomActiveMetric: PileMetric {
   let alpha: CGFloat = 1
   let transform = rotationTransform(0)
 
@@ -17,7 +17,7 @@ struct CustomActiveMetric: AnimatedStackMetric {
   }
 }
 
-struct CustomLeadingMetric: AnimatedStackMetric {
+struct CustomLeadingMetric: PileMetric {
   let alpha: CGFloat = 0
   let transform = rotationTransform(.pi / 2)
 
@@ -26,7 +26,7 @@ struct CustomLeadingMetric: AnimatedStackMetric {
   }
 }
 
-struct CustomTrailingMetric: AnimatedStackMetric {
+struct CustomTrailingMetric: PileMetric {
   let alpha: CGFloat = 0
   let transform = rotationTransform(-.pi / 2)
 
@@ -35,7 +35,7 @@ struct CustomTrailingMetric: AnimatedStackMetric {
   }
 }
 
-struct CustomAnimationMetric: AnimationMetric {
+struct CustomPileAnimationMetric: PileAnimationMetric {
   let duration: CFTimeInterval = 1
   let delay: CFTimeInterval = 0
   let damping: CGFloat = 0.8
@@ -46,19 +46,19 @@ struct CustomAnimationMetric: AnimationMetric {
 class ViewController: UIViewController {
 
   let titles = ["Tokyo", "New York", "Sao Paulo", "Seoul"]
-  let firstStackView: AnimatedStackView
-  let secondStackView: AnimatedStackView
+  let firstStackView: PileView
+  let secondStackView: PileView
   var currentSliderValue: Float = 0
   @IBOutlet var containerView: UIView!
 
   required init?(coder: NSCoder) {
 
-    self.firstStackView = AnimatedStackView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
-    self.secondStackView = AnimatedStackView(frame: CGRect(x: 0, y: 70, width: 100, height: 30),
+    self.firstStackView = PileView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+    self.secondStackView = PileView(frame: CGRect(x: 0, y: 70, width: 100, height: 30),
       activeMetric: CustomActiveMetric(),
       leadingMetric: CustomLeadingMetric(),
       trailingMetric: CustomTrailingMetric(),
-      animationMetric: CustomAnimationMetric())
+      animationMetric: CustomPileAnimationMetric())
 
     super.init(coder: coder)
 

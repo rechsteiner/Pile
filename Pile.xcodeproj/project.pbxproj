@@ -7,41 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E5BFE051BB98528004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; };
-		3E5BFE071BB98544004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; };
+		3E5BFE051BB98528004BE9C7 /* PileAnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* PileAnimationMetric.swift */; };
+		3E5BFE071BB98544004BE9C7 /* PileMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* PileMetric.swift */; };
 		3E5BFE101BB98A3E004BE9C7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE081BB98827004BE9C7 /* Nimble.framework */; };
 		3E5BFE111BB98A3E004BE9C7 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE091BB98827004BE9C7 /* Quick.framework */; };
-		3E5BFE121BB98AB2004BE9C7 /* AnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */; };
-		3E5BFE131BB98AB5004BE9C7 /* AnimatedStackMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */; };
+		3E5BFE121BB98AB2004BE9C7 /* PileAnimationMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE041BB98528004BE9C7 /* PileAnimationMetric.swift */; };
+		3E5BFE131BB98AB5004BE9C7 /* PileMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BFE061BB98544004BE9C7 /* PileMetric.swift */; };
 		3E5BFE161BB98ECF004BE9C7 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE081BB98827004BE9C7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E5BFE171BB98ECF004BE9C7 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5BFE091BB98827004BE9C7 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		95884E4C1B71533E0060C127 /* AnimatedStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 95884E4B1B71533E0060C127 /* AnimatedStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95884E521B71533E0060C127 /* AnimatedStackView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95884E461B71533E0060C127 /* AnimatedStackView.framework */; };
-		95884E591B71533E0060C127 /* AnimatedStackViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E581B71533E0060C127 /* AnimatedStackViewSpec.swift */; };
-		95884E631B7153590060C127 /* AnimatedStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E621B7153590060C127 /* AnimatedStackView.swift */; };
+		95884E4C1B71533E0060C127 /* Pile.h in Headers */ = {isa = PBXBuildFile; fileRef = 95884E4B1B71533E0060C127 /* Pile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95884E521B71533E0060C127 /* Pile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95884E461B71533E0060C127 /* Pile.framework */; };
+		95884E591B71533E0060C127 /* PileViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E581B71533E0060C127 /* PileViewSpec.swift */; };
+		95884E631B7153590060C127 /* PileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E621B7153590060C127 /* PileView.swift */; };
 		95884E6D1B71536E0060C127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E6C1B71536E0060C127 /* AppDelegate.swift */; };
 		95884E6F1B71536E0060C127 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95884E6E1B71536E0060C127 /* ViewController.swift */; };
 		95884E721B71536E0060C127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95884E701B71536E0060C127 /* Main.storyboard */; };
 		95884E741B71536E0060C127 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95884E731B71536E0060C127 /* Images.xcassets */; };
 		95884E771B71536E0060C127 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95884E751B71536E0060C127 /* LaunchScreen.xib */; };
-		95884E8A1B7153AA0060C127 /* AnimatedStackView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95884E461B71533E0060C127 /* AnimatedStackView.framework */; };
-		95884E8B1B7153AA0060C127 /* AnimatedStackView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95884E461B71533E0060C127 /* AnimatedStackView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		95884E8A1B7153AA0060C127 /* Pile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95884E461B71533E0060C127 /* Pile.framework */; };
+		95884E8B1B7153AA0060C127 /* Pile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95884E461B71533E0060C127 /* Pile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		952C3BB8204311280096C9E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95884E3D1B71533E0060C127 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95884E671B71536E0060C127;
+			remoteInfo = Example;
+		};
 		95884E531B71533E0060C127 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95884E3D1B71533E0060C127 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 95884E451B71533E0060C127;
-			remoteInfo = AnimatedStackView;
+			remoteInfo = Pile;
 		};
 		95884E8C1B7153AA0060C127 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95884E3D1B71533E0060C127 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 95884E451B71533E0060C127;
-			remoteInfo = AnimatedStackView;
+			remoteInfo = Pile;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -64,7 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				95884E8B1B7153AA0060C127 /* AnimatedStackView.framework in Embed Frameworks */,
+				95884E8B1B7153AA0060C127 /* Pile.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,17 +79,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMetric.swift; sourceTree = "<group>"; };
-		3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedStackMetric.swift; sourceTree = "<group>"; };
+		3E5BFE041BB98528004BE9C7 /* PileAnimationMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PileAnimationMetric.swift; sourceTree = "<group>"; };
+		3E5BFE061BB98544004BE9C7 /* PileMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PileMetric.swift; sourceTree = "<group>"; };
 		3E5BFE081BB98827004BE9C7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		3E5BFE091BB98827004BE9C7 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		95884E461B71533E0060C127 /* AnimatedStackView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimatedStackView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95884E461B71533E0060C127 /* Pile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95884E4A1B71533E0060C127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95884E4B1B71533E0060C127 /* AnimatedStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedStackView.h; sourceTree = "<group>"; };
-		95884E511B71533E0060C127 /* AnimatedStackViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimatedStackViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95884E4B1B71533E0060C127 /* Pile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pile.h; sourceTree = "<group>"; };
+		95884E511B71533E0060C127 /* PileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95884E571B71533E0060C127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95884E581B71533E0060C127 /* AnimatedStackViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedStackViewSpec.swift; sourceTree = "<group>"; };
-		95884E621B7153590060C127 /* AnimatedStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedStackView.swift; sourceTree = "<group>"; };
+		95884E581B71533E0060C127 /* PileViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PileViewSpec.swift; sourceTree = "<group>"; };
+		95884E621B7153590060C127 /* PileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PileView.swift; sourceTree = "<group>"; };
 		95884E681B71536E0060C127 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95884E6B1B71536E0060C127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95884E6C1B71536E0060C127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +113,7 @@
 			files = (
 				3E5BFE101BB98A3E004BE9C7 /* Nimble.framework in Frameworks */,
 				3E5BFE111BB98A3E004BE9C7 /* Quick.framework in Frameworks */,
-				95884E521B71533E0060C127 /* AnimatedStackView.framework in Frameworks */,
+				95884E521B71533E0060C127 /* Pile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95884E8A1B7153AA0060C127 /* AnimatedStackView.framework in Frameworks */,
+				95884E8A1B7153AA0060C127 /* Pile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +140,8 @@
 		95884E3C1B71533E0060C127 = {
 			isa = PBXGroup;
 			children = (
-				95884E481B71533E0060C127 /* AnimatedStackView */,
-				95884E551B71533E0060C127 /* AnimatedStackViewTests */,
+				95884E481B71533E0060C127 /* Pile */,
+				95884E551B71533E0060C127 /* PileTests */,
 				95884E691B71536E0060C127 /* Example */,
 				3E5BFE0E1BB9888A004BE9C7 /* Frameworks */,
 				95884E471B71533E0060C127 /* Products */,
@@ -144,40 +151,40 @@
 		95884E471B71533E0060C127 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95884E461B71533E0060C127 /* AnimatedStackView.framework */,
-				95884E511B71533E0060C127 /* AnimatedStackViewTests.xctest */,
+				95884E461B71533E0060C127 /* Pile.framework */,
+				95884E511B71533E0060C127 /* PileTests.xctest */,
 				95884E681B71536E0060C127 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		95884E481B71533E0060C127 /* AnimatedStackView */ = {
+		95884E481B71533E0060C127 /* Pile */ = {
 			isa = PBXGroup;
 			children = (
-				3E5BFE061BB98544004BE9C7 /* AnimatedStackMetric.swift */,
-				95884E621B7153590060C127 /* AnimatedStackView.swift */,
-				3E5BFE041BB98528004BE9C7 /* AnimationMetric.swift */,
+				3E5BFE041BB98528004BE9C7 /* PileAnimationMetric.swift */,
+				3E5BFE061BB98544004BE9C7 /* PileMetric.swift */,
+				95884E621B7153590060C127 /* PileView.swift */,
 				95884E491B71533E0060C127 /* Resources */,
 			);
-			path = AnimatedStackView;
+			path = Pile;
 			sourceTree = "<group>";
 		};
 		95884E491B71533E0060C127 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				95884E4B1B71533E0060C127 /* AnimatedStackView.h */,
+				95884E4B1B71533E0060C127 /* Pile.h */,
 				95884E4A1B71533E0060C127 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		95884E551B71533E0060C127 /* AnimatedStackViewTests */ = {
+		95884E551B71533E0060C127 /* PileTests */ = {
 			isa = PBXGroup;
 			children = (
-				95884E581B71533E0060C127 /* AnimatedStackViewSpec.swift */,
+				95884E581B71533E0060C127 /* PileViewSpec.swift */,
 				95884E561B71533E0060C127 /* Supporting Files */,
 			);
-			path = AnimatedStackViewTests;
+			path = PileTests;
 			sourceTree = "<group>";
 		};
 		95884E561B71533E0060C127 /* Supporting Files */ = {
@@ -216,16 +223,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95884E4C1B71533E0060C127 /* AnimatedStackView.h in Headers */,
+				95884E4C1B71533E0060C127 /* Pile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		95884E451B71533E0060C127 /* AnimatedStackView */ = {
+		95884E451B71533E0060C127 /* Pile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95884E5C1B71533E0060C127 /* Build configuration list for PBXNativeTarget "AnimatedStackView" */;
+			buildConfigurationList = 95884E5C1B71533E0060C127 /* Build configuration list for PBXNativeTarget "Pile" */;
 			buildPhases = (
 				95884E411B71533E0060C127 /* Sources */,
 				95884E421B71533E0060C127 /* Frameworks */,
@@ -237,14 +244,14 @@
 			);
 			dependencies = (
 			);
-			name = AnimatedStackView;
-			productName = AnimatedStackView;
-			productReference = 95884E461B71533E0060C127 /* AnimatedStackView.framework */;
+			name = Pile;
+			productName = Pile;
+			productReference = 95884E461B71533E0060C127 /* Pile.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		95884E501B71533E0060C127 /* AnimatedStackViewTests */ = {
+		95884E501B71533E0060C127 /* PileTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95884E5F1B71533E0060C127 /* Build configuration list for PBXNativeTarget "AnimatedStackViewTests" */;
+			buildConfigurationList = 95884E5F1B71533E0060C127 /* Build configuration list for PBXNativeTarget "PileTests" */;
 			buildPhases = (
 				95884E4D1B71533E0060C127 /* Sources */,
 				95884E4E1B71533E0060C127 /* Frameworks */,
@@ -255,10 +262,11 @@
 			);
 			dependencies = (
 				95884E541B71533E0060C127 /* PBXTargetDependency */,
+				952C3BB9204311280096C9E1 /* PBXTargetDependency */,
 			);
-			name = AnimatedStackViewTests;
-			productName = AnimatedStackViewTests;
-			productReference = 95884E511B71533E0060C127 /* AnimatedStackViewTests.xctest */;
+			name = PileTests;
+			productName = PileTests;
+			productReference = 95884E511B71533E0060C127 /* PileTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		95884E671B71536E0060C127 /* Example */ = {
@@ -297,7 +305,8 @@
 					};
 					95884E501B71533E0060C127 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0920;
+						TestTargetID = 95884E671B71536E0060C127;
 					};
 					95884E671B71536E0060C127 = {
 						CreatedOnToolsVersion = 6.4;
@@ -305,7 +314,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 95884E401B71533E0060C127 /* Build configuration list for PBXProject "AnimatedStackView" */;
+			buildConfigurationList = 95884E401B71533E0060C127 /* Build configuration list for PBXProject "Pile" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -318,8 +327,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95884E451B71533E0060C127 /* AnimatedStackView */,
-				95884E501B71533E0060C127 /* AnimatedStackViewTests */,
+				95884E451B71533E0060C127 /* Pile */,
+				95884E501B71533E0060C127 /* PileTests */,
 				95884E671B71536E0060C127 /* Example */,
 			);
 		};
@@ -375,9 +384,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E5BFE051BB98528004BE9C7 /* AnimationMetric.swift in Sources */,
-				3E5BFE071BB98544004BE9C7 /* AnimatedStackMetric.swift in Sources */,
-				95884E631B7153590060C127 /* AnimatedStackView.swift in Sources */,
+				3E5BFE051BB98528004BE9C7 /* PileAnimationMetric.swift in Sources */,
+				3E5BFE071BB98544004BE9C7 /* PileMetric.swift in Sources */,
+				95884E631B7153590060C127 /* PileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,9 +394,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E5BFE131BB98AB5004BE9C7 /* AnimatedStackMetric.swift in Sources */,
-				95884E591B71533E0060C127 /* AnimatedStackViewSpec.swift in Sources */,
-				3E5BFE121BB98AB2004BE9C7 /* AnimationMetric.swift in Sources */,
+				3E5BFE131BB98AB5004BE9C7 /* PileMetric.swift in Sources */,
+				95884E591B71533E0060C127 /* PileViewSpec.swift in Sources */,
+				3E5BFE121BB98AB2004BE9C7 /* PileAnimationMetric.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,14 +412,19 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		952C3BB9204311280096C9E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95884E671B71536E0060C127 /* Example */;
+			targetProxy = 952C3BB8204311280096C9E1 /* PBXContainerItemProxy */;
+		};
 		95884E541B71533E0060C127 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 95884E451B71533E0060C127 /* AnimatedStackView */;
+			target = 95884E451B71533E0060C127 /* Pile */;
 			targetProxy = 95884E531B71533E0060C127 /* PBXContainerItemProxy */;
 		};
 		95884E8D1B7153AA0060C127 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 95884E451B71533E0060C127 /* AnimatedStackView */;
+			target = 95884E451B71533E0060C127 /* Pile */;
 			targetProxy = 95884E8C1B7153AA0060C127 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -558,7 +572,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = AnimatedStackView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Pile/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.martinrechsteiner.$(PRODUCT_NAME:rfc1034identifier)";
@@ -583,7 +597,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = AnimatedStackView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Pile/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.martinrechsteiner.$(PRODUCT_NAME:rfc1034identifier)";
@@ -604,11 +618,13 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AnimatedStackViewTests/Info.plist;
+				INFOPLIST_FILE = PileTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.martinrechsteiner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
 			name = Debug;
 		};
@@ -619,11 +635,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = AnimatedStackViewTests/Info.plist;
+				INFOPLIST_FILE = PileTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.martinrechsteiner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
 			name = Release;
 		};
@@ -658,7 +676,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95884E401B71533E0060C127 /* Build configuration list for PBXProject "AnimatedStackView" */ = {
+		95884E401B71533E0060C127 /* Build configuration list for PBXProject "Pile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95884E5A1B71533E0060C127 /* Debug */,
@@ -667,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95884E5C1B71533E0060C127 /* Build configuration list for PBXNativeTarget "AnimatedStackView" */ = {
+		95884E5C1B71533E0060C127 /* Build configuration list for PBXNativeTarget "Pile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95884E5D1B71533E0060C127 /* Debug */,
@@ -676,7 +694,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95884E5F1B71533E0060C127 /* Build configuration list for PBXNativeTarget "AnimatedStackViewTests" */ = {
+		95884E5F1B71533E0060C127 /* Build configuration list for PBXNativeTarget "PileTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				95884E601B71533E0060C127 /* Debug */,

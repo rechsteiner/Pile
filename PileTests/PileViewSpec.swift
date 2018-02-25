@@ -1,22 +1,22 @@
 import Foundation
 import Quick
 import Nimble
-@testable import AnimatedStackView
+@testable import Pile
 
-class AnimatedStackViewSpec: QuickSpec {
+class PileViewSpec: QuickSpec {
   
   override func spec() {
     
-    describe("AnimatedStackView") {
+    describe("PileView") {
       
-      var stackView: AnimatedStackView!
+      var stackView: PileView!
       let firstView = UIView(frame: .zero)
       let secondView = UIView(frame: .zero)
       
       describe("when an array of views is set") {
         
         beforeEach {
-          stackView = AnimatedStackView(frame: .zero)
+          stackView = PileView(frame: .zero)
           stackView.setViews([firstView, secondView])
         }
         
@@ -34,7 +34,7 @@ class AnimatedStackViewSpec: QuickSpec {
       describe("when a view is pushed") {
         
         beforeEach {
-          stackView = AnimatedStackView(frame: .zero)
+          stackView = PileView(frame: .zero)
           stackView.setViews([firstView])
           stackView.push(secondView)
         }
@@ -59,7 +59,7 @@ class AnimatedStackViewSpec: QuickSpec {
       describe("when the active view gets pushed twice") {
         
         beforeEach {
-          stackView = AnimatedStackView(frame: .zero)
+          stackView = PileView(frame: .zero)
           stackView.setViews([firstView])
           stackView.push(secondView)
           stackView.push(secondView)
@@ -88,7 +88,7 @@ class AnimatedStackViewSpec: QuickSpec {
       describe("when a view is popped") {
         
         beforeEach {
-          stackView = AnimatedStackView(frame: .zero)
+          stackView = PileView(frame: .zero)
           stackView.setViews([firstView, secondView])
           stackView.pop()
         }
@@ -110,7 +110,7 @@ class AnimatedStackViewSpec: QuickSpec {
         describe("when there is one view on the stack") {
           
           beforeEach {
-            stackView = AnimatedStackView(frame: .zero)
+            stackView = PileView(frame: .zero)
             stackView.setViews([firstView])
             stackView.pop()
           }
@@ -127,7 +127,7 @@ class AnimatedStackViewSpec: QuickSpec {
       describe("when a view is updated") {
         
         beforeEach {
-          stackView = AnimatedStackView(frame: .zero)
+          stackView = PileView(frame: .zero)
           stackView.setViews([firstView])
           stackView.update(secondView)
         }

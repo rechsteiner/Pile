@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "95884E451B71533E0060C127"
-               BuildableName = "AnimatedStackView.framework"
-               BlueprintName = "AnimatedStackView"
-               ReferencedContainer = "container:AnimatedStackView.xcodeproj">
+               BuildableName = "Pile.framework"
+               BlueprintName = "Pile"
+               ReferencedContainer = "container:Pile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "95884E501B71533E0060C127"
-               BuildableName = "AnimatedStackViewTests.xctest"
-               BlueprintName = "AnimatedStackViewTests"
-               ReferencedContainer = "container:AnimatedStackView.xcodeproj">
+               BuildableName = "PileTests.xctest"
+               BlueprintName = "PileTests"
+               ReferencedContainer = "container:Pile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,9 +48,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "95884E501B71533E0060C127"
-               BuildableName = "AnimatedStackViewTests.xctest"
-               BlueprintName = "AnimatedStackViewTests"
-               ReferencedContainer = "container:AnimatedStackView.xcodeproj">
+               BuildableName = "PileTests.xctest"
+               BlueprintName = "PileTests"
+               ReferencedContainer = "container:Pile.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95884E451B71533E0060C127"
-            BuildableName = "AnimatedStackView.framework"
-            BlueprintName = "AnimatedStackView"
-            ReferencedContainer = "container:AnimatedStackView.xcodeproj">
+            BuildableName = "Pile.framework"
+            BlueprintName = "Pile"
+            ReferencedContainer = "container:Pile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -81,9 +81,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95884E451B71533E0060C127"
-            BuildableName = "AnimatedStackView.framework"
-            BlueprintName = "AnimatedStackView"
-            ReferencedContainer = "container:AnimatedStackView.xcodeproj">
+            BuildableName = "Pile.framework"
+            BlueprintName = "Pile"
+            ReferencedContainer = "container:Pile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -99,9 +99,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "95884E451B71533E0060C127"
-            BuildableName = "AnimatedStackView.framework"
-            BlueprintName = "AnimatedStackView"
-            ReferencedContainer = "container:AnimatedStackView.xcodeproj">
+            BuildableName = "Pile.framework"
+            BlueprintName = "Pile"
+            ReferencedContainer = "container:Pile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
