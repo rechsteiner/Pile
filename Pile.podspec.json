@@ -1,6 +1,6 @@
 {
   "name": "Pile",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "summary": "Transition between UIViews with custom animations",
   "homepage": "https://github.com/rechsteiner/Pile",
@@ -10,7 +10,7 @@
   "social_media_url": "http://twitter.com/rechsteiner",
   "source": {
     "git": "https://github.com/rechsteiner/Pile.git",
-    "tag": "v0.2.0"
+    "tag": "v0.2.1"
   },
   "platforms": {
     "ios": "8.0"
