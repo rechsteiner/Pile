@@ -238,7 +238,6 @@
 				95884E421B71533E0060C127 /* Frameworks */,
 				95884E431B71533E0060C127 /* Headers */,
 				95884E441B71533E0060C127 /* Resources */,
-				3E5BFE0C1BB98830004BE9C7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -257,6 +256,7 @@
 				95884E4E1B71533E0060C127 /* Frameworks */,
 				95884E4F1B71533E0060C127 /* Resources */,
 				3E5BFE151BB98EC0004BE9C7 /* Copy Frameworks */,
+				951C696D2044571D0064EDEA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -362,7 +362,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3E5BFE0C1BB98830004BE9C7 /* ShellScript */ = {
+		951C696D2044571D0064EDEA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
