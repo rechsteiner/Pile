@@ -133,14 +133,14 @@ Pile will be compatible with the lastest public release of Swift.
 Add the following line to your Podfile and run `pod install`:
 
 ```
-pod Pile', '~> 0.2.1'
+pod Pile', '~> 0.2.2'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 Add the following to your `Cartfile`:
 
-```  
+```
 github "rechsteiner/Pile"  
 ```
 
