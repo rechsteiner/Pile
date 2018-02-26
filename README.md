@@ -133,7 +133,7 @@ Pile will be compatible with the lastest public release of Swift.
 Add the following line to your Podfile and run `pod install`:
 
 ```
-pod Pile', '~> 0.2.0'
+pod Pile', '~> 0.2.1'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
